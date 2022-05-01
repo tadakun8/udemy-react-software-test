@@ -5,6 +5,6 @@ import customCounterSlice from "../features/customCounter/customeCounterSlice";
 export const store = configureStore({
   reducer: {
     counter: counterReducer,
-    custonCounter: customCounterSlice,
+    customCounter: customCounterSlice,
   },
 });

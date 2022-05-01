@@ -74,7 +74,9 @@ export const customCounterSlice = createSlice({
 
 export const { increment, decrement, incrementByAmount } = customCounterSlice.actions;
 
-export const selectCount = (state) => state.customeCounter.value;
-export const selectUsername = (state) => state.customeCounter.username;
+// state.XXXのXXXはstore.jsで命名したものになる
+// この名前でstateを区別している
+export const selectCount = (state) => state.customCounter.value;
+export const selectUsername = (state) => state.customCounter.username;
 
 export default customCounterSlice.reducer;
