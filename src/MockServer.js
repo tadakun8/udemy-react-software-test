@@ -7,11 +7,13 @@ function MockServer() {
   const [error, setError] = React.useState("");
 
   const fetchUser = async () => {
-    const response = await axios
-      .get("https://jsonplaceholder.typicode.com/users/11")
+    await axios
+      .get("https://jsonplaceholder.typicode.com/users/1")
+      .then((response) => {
+        setUsername(response.data.username);
+        setClicked(true);
+      })
       .catch(() => setError("Fetching Failed !"));
-    setUsername(response.data.username);
-    setClicked(true);
   };
   const buttonText = clicked ? "Loaded" : "Start Fetch";
 
