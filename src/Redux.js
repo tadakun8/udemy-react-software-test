@@ -13,7 +13,7 @@ function Redux() {
         <button onClick={() => dispatch(increment())}>+</button>
         <span data-testid="count-value">{count}</span>
         <button onClick={() => dispatch(decrement())}>-</button>
-        <button onClick={() => dispatch(incrementByAmount(number | 0))}>IncremenByAmount</button>
+        <button onClick={() => dispatch(incrementByAmount(number | 0))}>IncrementByAmount</button>
         <input type="text" placeholder="Enter" value={number} onChange={(e) => setNumber(e.target.value)} />
       </div>
     </div>
